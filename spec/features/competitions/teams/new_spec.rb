@@ -26,7 +26,7 @@ RSpec.describe "team new page" do
             fill_in 'Nickname', with: 'Munchies'
             click_on 'Register Team'
 
-            expect(current_path).to eq(competition_teams_path(@competition1))
+            expect(current_path).to eq(competition_path(@competition1))
             expect(page).to have_content('Missoula Munchies')
         end
     end
