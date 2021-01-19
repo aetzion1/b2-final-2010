@@ -14,12 +14,12 @@ RSpec.describe "teams index page" do
     end
 
     describe "As a user" do
-        xit "displays the names of all teams" do
-            expect(page).to have_content(@team1.name)
-            expect(page).to have_content(@team2.name)
+        it "displays the names of all teams" do
+            expect(page).to have_content(@team1.nickname)
+            expect(page).to have_content(@team2.nickname)
         end
 
-        xit "includes the average age of each team's players" do
+        it "includes the average age of each team's players" do
             expect(page).to have_content(@team1.average_age)
             expect(page).to have_content(@team2.average_age)
         end

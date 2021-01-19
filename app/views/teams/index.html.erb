@@ -1,7 +1,7 @@
 <h1>Teams Index</h1>
 <div>
     <% @teams.each do |team| %>
-        <p><%= team.name %><p>
+        <p><%= team.nickname %><p>
         <p>Average player age: <%= team.average_age %></p>
     <% end %>
 </div>
