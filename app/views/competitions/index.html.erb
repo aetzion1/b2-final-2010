@@ -1,6 +1,9 @@
 <h1>Competitions Index</h1>
 <div>
-    <% @competitions.each do |competiton| %>
-        <%= link_to "#{competition.name}", path: competition_path(competition) %>
+    <% @competitions.each do |competition| %>
+        <%= link_to "#{competition.name}", "/competitions/#{competition.id}" %>
+        <%# link_to "#{competition.name}", path: competition_path(competition.id) %>
+        <%# link_to "#{competition.name}", [competition] %>
+        <%# QUESTION: WHY IS ABOVE NOT WORKING? ROUTE EXISTS.%>
     <% end %>
 </div>
