@@ -24,7 +24,7 @@ RSpec.describe "teams index page" do
             expect(page).to have_content(@team2.average_age)
         end
 
-        xit "sorts teams by average age in descending order" do
+        it "sorts teams by average age in descending order" do
         end
     end
 end
