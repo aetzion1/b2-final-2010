@@ -4,8 +4,8 @@ RSpec.describe "competition show page" do
 
   before :each do 
     @competition1 = Competition.create!(name: "Feats of Strength", location: "Isle of Sky", sport: "Hurling")
-    @team1 = Team.create!(hometown: "Saskatoon", nickname: "Sycophants", competition: @competition1)
-    @team2 = Team.create!(hometown: "Manhattan", nickname: "Hurling Club", competition: @competition1)
+    @team1 = Team.create!(hometown: "Saskatoon", nickname: "Sycophants")
+    @team2 = Team.create!(hometown: "Manhattan", nickname: "Hurling Club")
     @player1 = Player.create!(name: "Manny MantaRay Lewis", age: 30, team: @team1)
     @player2 = Player.create!(name: "Martha Stew Wort", age: 20, team: @team1)
     @player3 = Player.create!(name: "Tommy Pickles", age: 40, team: @team2)
@@ -36,9 +36,9 @@ RSpec.describe "competition show page" do
     end
 
     it "displays a link to register a new team" do
-      expect(page).to have_link('Register a Team')
+      expect(page).to have_link('Register New Team')
 
-      click_link('Register a Team')
+      click_link('Register New Team')
 
       expect(current_path).to eq(new_competition_team_path(@competition1))
     end
