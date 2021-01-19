@@ -31,15 +31,15 @@ RSpec.describe "team new page" do
         end
     end
 
-    describe "Click Register Team without filling in a nickname" do
-        xit "Then I see a message telling me that I am missing required information And I still see the new team form" do
-            visit new_competition_team_path(@competition1) 
+    # describe "Click Register Team without filling in a nickname" do
+    #     it "Then I see a message telling me that I am missing required information And I still see the new team form" do
+    #         visit new_competition_team_path(@competition1) 
             
-            click_on 'Register Team'
+    #         click_on 'Register Team'
             
-            expect(page).to have_content('Team not registered: Missing required information')
-            expect(page).to have_button('Register Team')
-        end
-    end
+    #         expect(page).to have_content('Team not registered: Missing required information')
+    #         expect(page).to have_button('Register Team')
+    #     end
+    # end
 
 end

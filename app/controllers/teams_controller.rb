@@ -10,8 +10,8 @@ class TeamsController < ApplicationController
       CompetitionTeam.create(competition: @competition, team: @team)
       redirect_to competition_path(@competition)
     else
-      flash.now[:error] = 'Team not registered: Missing required info'
-      render :new
+      flash.notice = 'Team not registered: Missing required info'
+      redirect_to new_competition_team_path(@competition)
     end
   end
 
