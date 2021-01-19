@@ -32,7 +32,7 @@ RSpec.describe "competition show page" do
     end
 
     it "displays the average age of all players in the competition" do
-      expect(page).to have_content("Average player age: 25")
+      expect(page).to have_content("Average Player Age: 25")
     end
 
     it "displays a link to register a new team" do

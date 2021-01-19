@@ -1,2 +1,14 @@
-<h1>Competitions#show</h1>
-<p>Find me in app/views/competitions/show.html.erb</p>
+<h1><%= @competiton.name %></h1>
+<div>
+    <p>Location: <%= @competition.location %></p>
+    <p>Sort: <%= @competition.sport %></p>
+</div>
+<h2>Teams</h2>
+<div>
+    <% @teams.each do |team| %>
+        <li><%= team.hometown %> <%= team.nickname %>s</li>
+    <% end %>
+</div>
+<h2>Average Player Age: <%= @players.average_age %></h2>
+
+
