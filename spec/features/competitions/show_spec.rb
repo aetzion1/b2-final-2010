@@ -10,8 +10,8 @@ RSpec.describe "competition show page" do
     @player2 = Player.create!(name: "Martha Stew Wort", age: 20, team: @team1)
     @player3 = Player.create!(name: "Tommy Pickles", age: 40, team: @team2)
     @player4 = Player.create!(name: "Stu Pickles", age: 10, team: @team2)
-    CompetitionTeam.create!(competition: @competiton1, team: @team1)
-    CompetitionTeam.create!(competition: @competiton1, team: @team2)
+    CompetitionTeam.create!(competition: @competition1, team: @team1)
+    CompetitionTeam.create!(competition: @competition1, team: @team2)
 
     visit competition_path(@competition1.id)
   end
@@ -42,5 +42,6 @@ RSpec.describe "competition show page" do
 
       expect(current_path).to eq(new_competition_team_path(@competition1))
     end
+  end
 
 end

@@ -1,4 +1,4 @@
-<h1><%= @competiton.name %></h1>
+<h1><%= @competition.name %></h1>
 <div>
     <p>Location: <%= @competition.location %></p>
     <p>Sort: <%= @competition.sport %></p>
@@ -10,5 +10,6 @@
     <% end %>
 </div>
 <h2>Average Player Age: <%= @players.average_age %></h2>
-
-
+<h2><%= link_to 'Register New Team', "/competitions/#{@competition.id}/teams/new" %></h2>
+<%# link_to 'Register New Team', path: new_competition_team_path(@competition) %>
+<%# QUESTION: WHY IS ABOVE NOT WORKING? TAKES ME TO COMPETITON SHOW PAGE.%>
