@@ -31,6 +31,7 @@ RSpec.describe "team new page" do
         end
     end
 
+    # SO SO SAD PATH - TBD
     # describe "Click Register Team without filling in a nickname" do
     #     it "Then I see a message telling me that I am missing required information And I still see the new team form" do
     #         visit new_competition_team_path(@competition1) 
